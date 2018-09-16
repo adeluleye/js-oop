@@ -31,3 +31,14 @@ const circle4 = createCircle(3);
 console.log(circle2.radius);
 console.log(circle3.radius);
 console.log(circle4.radius);
+
+// creating objects using construction function
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function() {
+    console.log('draw');
+  };
+}
+
+const another = new Circle(1);
+another.draw();
