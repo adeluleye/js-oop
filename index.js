@@ -42,3 +42,22 @@ function Circle(radius) {
 
 const another = new Circle(1);
 another.draw();
+
+// Abstraction
+function Circle7(radius) {
+  this.radius = radius;
+
+  let defaultLocation = { x: 0, y: 0 };
+
+  let computeOptimumLocation = function() {
+    // ...
+  };
+
+  this.draw = function() {
+    computeOptimumLocation();
+    console.log('draw');
+  };
+}
+
+const circle7 = new Circle7(10);
+circle.draw();
